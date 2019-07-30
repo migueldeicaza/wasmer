@@ -20,6 +20,10 @@ steps:
   displayName: 'Install Rust Nightly'
 
 - script: |
+    rustup default nightly
+  displayName: 'Rustup nightly'
+  
+- script: |
     make install    
   displayName: 'Cargo build'
 
