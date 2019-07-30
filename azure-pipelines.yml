@@ -11,9 +11,12 @@ pool:
 
 steps:
 - script: |
-    apt-get update \
-    && apt-get -y install sudo strace curl cmake pkg-config python libssl-dev llvm-dev libz-dev gnuplot-nox \
-    && curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
+    sudo apt-get update \
+    && sudo apt-get -y install sudo strace curl cmake pkg-config python libssl-dev llvm-dev libz-dev gnuplot-nox \
+  displayName: 'Install Dependencies'
+
+- script: |
+    curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
   displayName: 'Install Rust Nightly'
 
 - script: |
