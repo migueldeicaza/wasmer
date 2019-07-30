@@ -20,5 +20,9 @@ steps:
   displayName: 'Install Rust Nightly'
 
 - script: |
-    cargo build release    
+    make install    
   displayName: 'Cargo build'
+
+- script: |
+    cargo build -p wasmer-runtime-c-api
+  displayName: 'Build the C API'
