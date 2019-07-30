@@ -31,7 +31,7 @@ steps:
     cargo build -p wasmer-runtime-c-api
   displayName: 'Build the C API'
 
-- task: PublishBuildArtifacts@0
+- task: PublishBuildArtifacts@1
   inputs: 
     pathtoPublish: target
     ArtifactName: drop
